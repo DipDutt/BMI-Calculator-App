@@ -10,15 +10,27 @@ import Foundation
 
 struct CalculatorBrain {
     
-    var bmiValue:Float?
+    var bmi:BMI?
     
     
     mutating func calculateBMI(height:Float, weight:Float) {
-        bmiValue = weight / pow(height, 2)
+       let  bmiValue = weight / pow(height, 2)
+        if bmiValue < 18.5 {
+           bmi = BMI(value: bmiValue, advice: "Eat More Pies", color: .blue)
+        }
+        
+        else if bmiValue > 18.5 {
+            bmi = BMI(value: bmiValue, advice: "You are Fit", color: .green)
+        }
+        
+        else {
+            bmi = BMI(value: bmiValue, advice: "Eat Less Pie", color: .red)
+        }
+        
     }
     
     func getBmiValue()-> String {
-        return String(format:"%.1f", bmiValue ?? 0)
+        return String(format:"%.1f", bmi?.value ?? 0)
     }
     
 }

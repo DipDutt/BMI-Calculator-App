@@ -13,7 +13,6 @@ class ResultViewController: UIViewController {
     // MARK: - Properties
     
     @IBOutlet weak var bmiValueLabel: UILabel!
-    
     @IBOutlet weak var adviceLabel: UILabel!
     
     var bmiValue:String?
@@ -29,6 +28,8 @@ class ResultViewController: UIViewController {
     
     func showBmiValue() {
         bmiValueLabel.text = bmiValue
+        adviceLabel.text = bmiAdvice
+        view.backgroundColor = bmiColor
     }
     
     

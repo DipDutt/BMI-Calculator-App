@@ -17,6 +17,8 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var adviceLabel: UILabel!
     
     var bmiValue:String?
+    var bmiAdvice:String?
+    var bmiColor:UIColor?
     
     override func viewDidLoad() {
         super.viewDidLoad()

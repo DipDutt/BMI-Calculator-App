@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct CalculatorBrain {
     
@@ -31,6 +32,14 @@ struct CalculatorBrain {
     
     func getBmiValue()-> String {
         return String(format:"%.1f", bmi?.value ?? 0)
+    }
+    
+    func getAdvice()-> String {
+        bmi?.advice ?? "no advice"
+    }
+    
+    func getColor ()-> UIColor {
+        bmi?.color ?? UIColor.white
     }
     
 }

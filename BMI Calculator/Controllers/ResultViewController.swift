@@ -34,7 +34,7 @@ class ResultViewController: UIViewController {
     
     
     @IBAction func pressRecalculateButton(_ sender: UIButton) {
-        
+        dismiss(animated: true, completion: nil)
     }
 
 }

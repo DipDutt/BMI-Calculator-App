@@ -32,9 +32,9 @@ class ResultViewController: UIViewController {
         view.backgroundColor = bmiColor
     }
     
-    
+    // MARK: - Create Funtion pressRecalculateButton
     @IBAction func pressRecalculateButton(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
-
+    
 }
